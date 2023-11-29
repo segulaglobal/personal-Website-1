@@ -1,0 +1,39 @@
+// Table of Content
+// 1. Contact form
+
+
+
+
+
+// Contact Form
+.section-contact {
+    padding: 10rem 0 15rem;
+    text-align: center;
+
+    .contact-form {
+        width: 100%;
+        padding: 1rem;
+        max-width: 800px;
+        display: inline-block;
+    }
+    .input-field {
+        width: 90%;
+        outline: none;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 1rem;
+        padding-inline: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 3rem;
+        background-color: var(--clr-gray-light);
+        border: 1px solid var(--clr-gray);
+        resize: none;
+        transition: .4s;
+
+        &:focus, &:valid {
+            width: 100%;
+            border: 1px solid var(--clr-primary);
+        }
+    }
+}
