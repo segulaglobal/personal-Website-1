@@ -18,122 +18,57 @@
 // == Section-hero ==
 .section-hero {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     @include ease(.4s);
     position: relative;
-    padding-top: 180px;
-
-
-    &#hero {
-        // padding-top: 0;
-    }
-
-    .hero-image {
-        position: relative;
-        z-index: 2;
-        margin-top: 10px;
-        
-    }
-
+    background-color: var(--clr-gray);
+    overflow: hidden;
     
-    .hero-text {
-        
-        h1 {
-            font-size: 5rem;
-            line-height: 1.5;
-            margin-bottom: 3rem;
-        }
-        p {
-            font-size: 1.8rem;
-        }
+
+    .hero-container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
     }
 
-    .btn {
-        opacity: 0;
-        animation: fadeIn .4s ease-in-out 1s forwards;
+    .hero-img {
+        line-height: 1;
+        height: 100%;
+        width: auto;
     }
-    
+    .hero-name {
+        color: var(--clr-white);
+        font-family: 'branch', sans-serif;
+        font-size: 20rem;
+        line-height: 1;
+        transform: translateX(100%);
+        animation: my-animation 15s linear infinite;
+        position: absolute;
+        bottom: 10rem;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
 }
 // End of Section Hero
 
 
 
 
+// ====================== Hero About ========================
+.hero-about {
+    padding: 10rem 0 10rem;
 
-
-// ====================== Section services ===================
-.section-services {
-    padding: 10rem 0 15rem;
-
-    .service {
-        padding: 3rem;
-        box-shadow: 0 .5rem .5rem rgba(64, 48, 102, 0.286);
-        border-radius: 3rem;
-        transition: .4s;
-        border-bottom: 3px solid var(--clr-primary);
-
-        &:hover {
-            transform: translateY(-3px);
-        }
-        &:hover .service__icon .red {
-            color: rgba(248, 161, 161, 0.495);
-            background-color: red;
-        }
-        &:hover .service__icon .yellow {
-            color: rgba(248, 241, 161, 0.637);
-            background-color: rgb(173, 159, 0);
-        }
-        &:hover .service__icon .blue {
-            color: rgba(161, 190, 248, 0.637);
-            background-color: rgb(20, 0, 122);
-        }
-        &:hover .service__icon .green {
-            color: rgba(161, 248, 221, 0.637);
-            background-color: rgb(11, 108, 1);
-        }
-
-        &__icon i {
-            padding: 2rem;
-            border-radius: 1rem;
-            margin-bottom: 2rem;
-            font-size: 1.7rem;
-            transition: .4s;
-        }
-        &__icon .red {
-            background-color: rgba(248, 161, 161, 0.495);
-            color: red;
-
-        }
-        &__icon .yellow {
-            background-color: rgba(248, 241, 161, 0.637);
-            color: rgb(173, 159, 0);
-        }
-        &__icon .blue {
-            background-color: rgba(161, 190, 248, 0.637);
-            color: rgb(20, 0, 122);
-        }
-        &__icon .green {
-            background-color: rgba(161, 248, 221, 0.637);
-            color: rgb(11, 108, 1);
-        }
-
-        h3 {
-            padding-block: 1rem;
-        }
+    .col-2 {
+        gap: 10rem;
     }
 
-}
-// End of Section Services
-
-
-
-
-
-
-
-// ====================== About Us ========================
-.section-about {
-    padding: 13rem 0 10rem;
+    h1 {
+        line-height: 1.5;
+        font-size: 3rem;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
 
 }
 // End of About Us
@@ -141,24 +76,34 @@
 
 
 
-
-// ====================== Portfolio  ========================
-.section-portfolio {
+// ====================== Hero speaking ========================
+.hero-speaking {
     padding: 10rem 0;
 
-    .project {
-        transition: .3s;
-        opacity: 1;
+    h1 {
+        font-size: 3rem;
+        width: 100%;
+        max-width: 600px;
+        line-height: 1.5;
+        margin-bottom: 5rem;
+    }
+}
+// End of hero speaking
 
-        &:hover, &:focus {
-            transform: scale(0.95);
-            opacity: .9;
+
+
+// ====================== Hero awards ========================
+.section-awards {
+    padding: 15rem 0;
+
+    .award {
+
+        img {
+            // width: 200px;
+            max-width: 250px;
         }
     }
 }
-
-
-
 
 
 
@@ -167,115 +112,79 @@
 // ================= SECTION TESTIMONIAL ===================
 .section-testimonials {
     padding: 15rem 0;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    text-align: center;
+    position: relative;
 
-    
-    .testimonials-container {
-        position: relative;
-        padding: 0rem 50px 5rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-        width: 100%;
-
-        // overflow-x: auto;
-        // overscroll-behavior-inline: contain;
-    }
-
-        /* Fading animation */
-    .fade {
-        animation-name: fade;
-        animation-duration: 2s;
-    }
-    
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-
-    .hide {
-        // display: none;
-    }
-    .prev, .next {
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        border-radius: 40%;
-        background-color: transparent;
-        border: 2px solid var(--clr-gray-dark);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include ease(.3s);
+    // custom shape
+    .custom-shape-divider-top-1701598037 {
         position: absolute;
-        top: 40%;
-
-        &:hover, &:focus {
-            background-color: var(--clr-primary);
-            color: #fff;
-        }
-    }
-    .prev {
+        top: 0;
         left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
     }
-    .next {
-        right: 0;
+    
+    .custom-shape-divider-top-1701598037 svg {
+        position: relative;
+        display: block;
+        width: calc(135% + 1.3px);
+        height: 203px;
     }
-
-    // dashes at the bottom
-    .dot {
-        cursor: pointer;
-        height: 12px;
-        width: 12px;
-        background-color: var(--clr-gray);
-        border-radius: 50%;
-        display: inline-block;
-        @include ease(.4s);
-
-        &:not(:last-child) {
-            margin-right: .5rem;
+    
+    .custom-shape-divider-top-1701598037 .shape-fill {
+        fill: #FFFFFF;
+    }
+    
+    /** For mobile devices **/
+    @media (max-width: 767px) {
+        .custom-shape-divider-top-1701598037 svg {
+            width: calc(135% + 1.3px);
+            height: 75px;
         }
-    }
-    .active, .dot:hover, .dot:focus {
-        background-color: var(--clr-primary);
-        transform: scale(1.2);
-        box-shadow: 0 .5rem 1rem rgba(1, 10, 28, 0.54);
     }
 
     .testimonial {
-        background: var(--clr-white);
-        width: 100%;
+        display: inline-block;
         text-align: center;
-        border-radius: 10px;
-        @include ease(.4s);
-        padding: 2.5rem 2rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.329);
-        margin-left: auto;
-        margin-right: auto;
-        @include ease(.3s);
-        border-bottom: 2px solid var(--clr-primary);
-        display: none;
+        padding: 0;
+        position: relative;
+        z-index: 1;
 
-        &:hover {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.129);
-            transform: translateY(-3px);
+        &-img {
+            width: 100px;
+            // transform: translateY(-50%);
+            margin-top: 3rem;
         }
 
-
-        &__text {
-            text-align: center;
+        &-background {
+            width: 50%;
+            height: 100%;
+            background-color: #181818;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
         }
 
-        &__img {
-            width: auto;
-            height: 100px;
-            margin: 0rem auto;
-            margin-top: -50px; 
-            border: 1px solid var(--clr-primary);
-            border-radius: 50%;
+        .hr {
+            width: 150px;
+            display: inline-block;
+            height: 1px;
+            background-color: var(--clr-gray);
+            margin: 4rem 0rem 1rem;
         }
 
-        &__name {
-            text-align: center;
+        &-title {
+            color: var(--clr-gray);
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+        &-name {
             margin-bottom: 3rem;
         }
     }
@@ -289,6 +198,11 @@
 
 
 
+// ================= SECTION Blog ===================
+.section-blog {
+    padding: 15rem 0;
+    background-color: var(--clr-gray-light);
+}
 
 
 
@@ -355,10 +269,11 @@
     .section-hero {
 
         .hero-container {
-            grid-template-columns: 1fr;
-
-            .hero-image {
-                display: none;
+            
+            .hero-img {
+                width: auto;
+                height: 100%;
+                transform: translateX(-10rem);
             }
         }
     }
@@ -391,7 +306,7 @@
         .hero-container {
 
             .hero-name {
-                font-size: 4rem;
+                font-size: 10rem;
             }
         }
     }

@@ -40,6 +40,12 @@
     grid-template-rows: auto;
     align-items: center;
 }
+.col-3-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
 
 // section
 .section {
@@ -69,6 +75,9 @@
      .col-4 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 4rem;
+    }
+    .col-3-2 {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

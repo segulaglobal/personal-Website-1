@@ -1,9 +1,8 @@
 @mixin ease($speed) {
-    transition-duration: $speed;
-    transition-timing-function: ease-in-out;
+    transition: all $speed cubic-bezier(0.000, 0.435, 0.675, 0.190);;
 }
-@mixin skewUp {
-    transform: scale(1.1) skew(5deg, 3deg);
+@mixin transRight {
+    transform: scale(1.1) translateX(5px);
 }
 
 @mixin shadow  {
