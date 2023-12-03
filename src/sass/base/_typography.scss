@@ -19,25 +19,15 @@
 
 // heading Secondary
 .heading-secondary {
-    font-size: 1.5rem;
-    text-transform: capitalize;
+    font-size: 2rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--clr-gray);
+    color: var(--clr-primary);
     line-height: 1;
     position: relative;
     z-index: 1;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--clr-gray);
-    margin-bottom: 5rem;
-}
 
-// heading tertiary
-.heading-tertiary {
-    color: var(--clr-gray);
-    font-weight: normal;
-    font-size: 1.4rem;
 }
-
 
 // thin & light text
 .thin-text {
@@ -73,7 +63,7 @@
 @media screen and (max-width: 766px) {
 
   .heading-secondary {
-    //   font-size: 25px;
+      font-size: 25px;
       font-weight: bolder;
   }
 }

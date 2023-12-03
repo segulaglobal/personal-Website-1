@@ -13,27 +13,23 @@
 // ============= NAVIGATION BUTTON ===============
 const navButton = document.querySelector(".nav-btn");
 const navList = document.querySelector(".nav-list");
-const navMenu = document.querySelector(".nav-menu");
-const navContent = document.querySelector(".nav-content");
 const navOverlay = document.querySelector(".nav-overlay");
-const navBackground = document.querySelector(".nav-background");
 const navItem = document.querySelectorAll(".nav-item");
+const navEmail = document.querySelector(".nav-email");
 
 let showMenu = false;
 navButton.addEventListener("click", openMenu);
 navOverlay.addEventListener("click", openMenu);
-// navItem.forEach(item => {
-//     item.addEventListener("click", openMenu)
-// })
+navItem.forEach(item => {
+    item.addEventListener("click", openMenu)
+})
 
 function openMenu () {
     if(!showMenu) {
         navButton.classList.add("close");
         navList.classList.add("show");
         navOverlay.classList.add("show");
-        navMenu.classList.add("show");
-        navContent.classList.add("show");
-        navBackground.classList.add("show");
+        navEmail.classList.add("show");
         navItem.forEach(item => {
             item.classList.add("show");
         });
@@ -44,9 +40,7 @@ function openMenu () {
         navList.classList.remove("show");
         navButton.classList.remove("show");
         navOverlay.classList.remove("show");
-        navContent.classList.remove("show");
-        navBackground.classList.remove("show");
-        navMenu.classList.remove("show");
+        navEmail.classList.remove("show");
         navItem.forEach(item => {
             item.classList.remove("show");
         });
@@ -153,31 +147,31 @@ function openMenu () {
 
 // ===================== testimonial carousel ===================
 
-// let slideIndex = 1;
-// showSlides(slideIndex);
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("testimonial");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("testimonial");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

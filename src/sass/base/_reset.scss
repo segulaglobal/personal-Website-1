@@ -35,19 +35,14 @@
 }
 
 :root {
-    --clr-primary: #E80000;
+    --clr-primary: #14142B;
     --clr-white: #ffffff;
-    --clr-black: #1C1D20;
-    --clr-gray-light: #dadce4;
-    --clr-gray: #999D9E;
+    --clr-black: #000814;
+    --clr-gray-light: #F6F7FF;
+    --clr-gray: #6C6F87;
     --clr-gray-dark: #111111;
 
-    --text-clr: #1C1D20;
-}
-
-::selection {
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
+    --text-clr: #6C6F87;
 }
 
 html {
